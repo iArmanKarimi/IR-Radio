@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A52B5E02-A45A-481F-8B0C-9850DB9E45C3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>IRRadioDesktopWin</RootNamespace>
+    <AssemblyName>IRRadioDesktopWin</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.11.39.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.39\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutMe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutMe.Designer.cs">
+      <DependentUpon>AboutMe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IAnyClick.cs" />
+    <Compile Include="IStationsUserControl.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ucSoundControls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSoundControls.Designer.cs">
+      <DependentUpon>ucSoundControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucGeneralStations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucGeneralStations.Designer.cs">
+      <DependentUpon>ucGeneralStations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucNamaaStations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucNamaaStations.Designer.cs">
+      <DependentUpon>ucNamaaStations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucProvincialStations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucProvincialStations.Designer.cs">
+      <DependentUpon>ucProvincialStations.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutMe.resx">
+      <DependentUpon>AboutMe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSoundControls.resx">
+      <DependentUpon>ucSoundControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucGeneralStations.resx">
+      <DependentUpon>ucGeneralStations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNamaaStations.resx">
+      <DependentUpon>ucNamaaStations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucProvincialStations.resx">
+      <DependentUpon>ucProvincialStations.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_audio_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_no_audio_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-abadan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-alborz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-ardebil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-azgharbi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-booshehr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-charmahal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-esfahan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-fars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-gilan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-golestan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-hamedan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-ilam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-kerman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-kermanshah.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-khalij.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-khoozestan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-khorasanjonoobi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-khorasanrazavi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-khorasanshomali.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-kish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-kordestan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-lorestan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-mahabad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-markazi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-mazandaran.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-qazvin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-qom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-semnan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-tabriz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-yasuj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-yazd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-zahedan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-zanjan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-ziarat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-tehran.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-salamat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-talavat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-tartil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-varzesh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-avaa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-eghtesad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-farhang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-goftego.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-iran.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-javan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-maaref.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-namayesh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-payam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-quran.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-saba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ava.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eghtesad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\farhang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goftogoo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-monasebati.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-boroon-dari.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-boroon-studio110.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-arabic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio-english.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_shutdown_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TV_no_signal_color_bars.png" />
+    <None Include="Resources\radio_FM_picture.png" />
+    <None Include="Resources\icons8_shutdown_warn_orange_80px.png" />
+    <None Include="Resources\icons8-info-64.png" />
+    <None Include="Resources\icons8-account-64.png" />
+    <None Include="Resources\icons8-github-48.png" />
+    <Content Include="Resources\icons8_shutdown_gray_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IRRadioLib\IRRadioLib.csproj">
+      <Project>{604f413a-1521-4b51-9fda-6ca0ab43feee}</Project>
+      <Name>IRRadioLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

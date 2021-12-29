@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRRadioDesktop", "IRRadioDesktopWin\IRRadioDesktop.csproj", "{A52B5E02-A45A-481F-8B0C-9850DB9E45C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRRadioLib", "IRRadioLib\IRRadioLib.csproj", "{604F413A-1521-4B51-9FDA-6CA0AB43FEEE}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "IRRadioSetup", "IRRadioSetup\IRRadioSetup.vdproj", "{EE6DB23A-1866-4AF8-87FF-A982FBF0A311}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A52B5E02-A45A-481F-8B0C-9850DB9E45C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A52B5E02-A45A-481F-8B0C-9850DB9E45C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A52B5E02-A45A-481F-8B0C-9850DB9E45C3}.Debug|x86.ActiveCfg = Debug|x86
+		{A52B5E02-A45A-481F-8B0C-9850DB9E45C3}.Debug|x86.Build.0 = Debug|x86
+		{A52B5E02-A45A-481F-8B0C-9850DB9E45C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A52B5E02-A45A-481F-8B0C-9850DB9E45C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A52B5E02-A45A-481F-8B0C-9850DB9E45C3}.Release|x86.ActiveCfg = Release|x86
+		{A52B5E02-A45A-481F-8B0C-9850DB9E45C3}.Release|x86.Build.0 = Release|x86
+		{604F413A-1521-4B51-9FDA-6CA0AB43FEEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{604F413A-1521-4B51-9FDA-6CA0AB43FEEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{604F413A-1521-4B51-9FDA-6CA0AB43FEEE}.Debug|x86.ActiveCfg = Debug|x86
+		{604F413A-1521-4B51-9FDA-6CA0AB43FEEE}.Debug|x86.Build.0 = Debug|x86
+		{604F413A-1521-4B51-9FDA-6CA0AB43FEEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{604F413A-1521-4B51-9FDA-6CA0AB43FEEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{604F413A-1521-4B51-9FDA-6CA0AB43FEEE}.Release|x86.ActiveCfg = Release|x86
+		{604F413A-1521-4B51-9FDA-6CA0AB43FEEE}.Release|x86.Build.0 = Release|x86
+		{EE6DB23A-1866-4AF8-87FF-A982FBF0A311}.Debug|Any CPU.ActiveCfg = Debug
+		{EE6DB23A-1866-4AF8-87FF-A982FBF0A311}.Debug|x86.ActiveCfg = Debug
+		{EE6DB23A-1866-4AF8-87FF-A982FBF0A311}.Release|Any CPU.ActiveCfg = Release
+		{EE6DB23A-1866-4AF8-87FF-A982FBF0A311}.Release|x86.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A966B67-F1C1-4160-9B2F-7F0116B25563}
+	EndGlobalSection
+EndGlobal
